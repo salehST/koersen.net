@@ -118,11 +118,10 @@ export default {
                         
                         <NuxtLink to="/" class="text-base font-semibold md:text-sm md:font-normal py-5 px-5 text-black transition hover:text-cblue w-full md:w-auto">Home</NuxtLink> 
                         <NuxtLink to="/All rates"
-                            class="text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black w-full md:w-auto transition hover:text-cblue">Knowledge
-                            Base</NuxtLink>
-                        <NuxtLink to="/news"
+                            class="text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black w-full md:w-auto transition hover:text-cblue">All rates</NuxtLink>
+                        <NuxtLink to="/crypto-rates"
                             class="w-full md:w-auto text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black transition hover:text-cblue">Crypto</NuxtLink>
-                        <NuxtLink to="/calculator"
+                        <NuxtLink to="/currency-details"
                             class="w-full md:w-auto text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black transition hover:text-cblue">Converter</NuxtLink>
                         <div class="search-icon">
                             <button @click="openModal" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
