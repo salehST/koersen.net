@@ -49,13 +49,11 @@ parent.innerText = item.target.innerText;
             <div class="w-full text-left md:text-center">
                 <h2 class=" text-[32px] text-primary md:text-5xl font-bold leading-9 md:leading-[57px] mb-6 flex items-center justify-start md:justify-center">
                     Currency Calculator</h2>
-
-                    <p class="text-[#6B6C6F] font-normal text-base">Currency current exchange rates of all strange currencies in one place.</p>
             </div>
 
         </div>
         <div class="calculator-wrapper flex  justify-center mb-12">
-            <div class="inner-ca w-full md:w-auto bg-[#F9FBFF] border border-[#CBD7F1] rounded-[20px] px-6 py-6  inline-flex mx-auto justify-center">
+            <div class="inner-ca w-full md:w-auto bg-white border border-[#F3F4F6] rounded-[20px] px-6 py-6  inline-flex mx-auto justify-center">
                 <div class="mb-3 exchange-mb">                                
                     <div class="flex flex-col  md:flex-row">
                         <div class="">
@@ -63,10 +61,10 @@ parent.innerText = item.target.innerText;
                         class="block mb-1 text-xs font-normal text-black">From</label>
                             <div class="flex">
                                 <input type="text" id="weight"
-                                    class="rounded-none rounded-l-md bg-white border border-r-0 border-[#D5DBE8] text-black font-normal text-xs focus:ring-[#3b82f6] focus:outline-none focus:border-[#3b82f6] block flex-1 min-w-0 w-full p-2.5"
+                                    class="rounded-none rounded-l-md bg-white border border-r-0 border-[#F3F4F6] text-black font-normal text-xs focus:ring-[#3b82f6] focus:outline-none focus:border-[#3b82f6] block flex-1 min-w-0 w-full p-2.5"
                                     placeholder="€ 100">
                                 <span
-                                    class="inline-flex items-center bg-white text-black font-normal text-xs focus:ring-[#3b82f6] border-[#D5DBE8] border rounded-r-md"> 
+                                    class="inline-flex items-center bg-white text-black font-normal text-xs focus:ring-[#3b82f6] border-[#F3F4F6] border rounded-r-md"> 
                                     <div class="">
                                 <div class="no-label w-[85px]">
                                     <div class="select">
@@ -93,10 +91,10 @@ parent.innerText = item.target.innerText;
                         
                         <div class="flex">
                             <input type="text" id="weight"
-                                class="rounded-none rounded-l-md bg-white border border-r-0 border-[#D5DBE8] text-black font-normal text-xs focus:ring-[#3b82f6] focus:outline-none focus:border-[#3b82f6] block flex-1 min-w-0 w-full p-2.5"
+                                class="rounded-none rounded-l-md bg-white border border-r-0 border-[#F3F4F6] text-black font-normal text-xs focus:ring-[#3b82f6] focus:outline-none focus:border-[#3b82f6] block flex-1 min-w-0 w-full p-2.5"
                                 placeholder="$ 100">
                             <span
-                                class="inline-flex items-center bg-white text-black font-normal text-xs focus:ring-[#3b82f6] border-[#D5DBE8] border rounded-r-md"> 
+                                class="inline-flex items-center bg-white text-black font-normal text-xs focus:ring-[#3b82f6] border-[#F3F4F6] border rounded-r-md"> 
                                 <div class="">
                             <div class="no-label w-[85px]">
                                 <div class="select">
