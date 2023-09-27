@@ -12,7 +12,7 @@
                         </div>
                         <ul>
                             <li class="text-black text-base font-normal">BigBank</li>
-                            <li class="flex items-center text-black text-sm">
+                            <li class="flex items-center text-[#15952A] text-sm">
                                 2.20%
                             </li>
                         </ul>
@@ -25,7 +25,7 @@
                         </div>
                         <ul>
                             <li class="text-black text-base font-normal">Anadolubank</li>
-                            <li class="flex items-center text-black text-sm">
+                            <li class="flex items-center text-[#15952A] text-sm">
                                 5.52%
                             </li>
                         </ul>
@@ -38,7 +38,7 @@
                         </div>
                         <ul>
                             <li class="text-black text-base font-normal">Centraal Beheer</li>
-                            <li class="flex items-center text-black text-sm">
+                            <li class="flex items-center text-[#15952A] text-sm">
                                 1.25%
                             </li>
                         </ul>
@@ -51,7 +51,7 @@
                         </div>
                         <ul>
                             <li class="text-black text-base font-normal">Lloyds Bank</li>
-                            <li class="flex items-center text-black text-sm">
+                            <li class="flex items-center text-[#15952A] text-sm">
                                 7.52%
                             </li>
                         </ul>
@@ -64,7 +64,7 @@
                         </div>
                         <ul>
                             <li class="text-black text-base font-normal">LeasePlan Bank</li>
-                            <li class="flex items-center text-black text-sm">
+                            <li class="flex items-center text-[#15952A] text-sm">
                                 2.50%
                             </li>
                         </ul>

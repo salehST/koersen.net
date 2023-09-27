@@ -238,7 +238,11 @@ canvas#priceChart1{
             
                 <div class="w-full lg:w-[818px] mb-8">
                     
-                   
+                    <div class="box-wrapper  bg-white border border-[#F3F4F6] rounded-[20px] px-6 pt-6 mb-8">
+                    <h2 class=" text-xl text-primary md:text-4xl font-bold leading-9 md:leading-[57px] mb-6 flex items-center justify-start md:justify-center">
+                    Currency Calculator</h2>
+                    <CommonTopCalculator />
+                </div>
                         <h2 class="text-black text-2xl md:text-[32px] font-semibold mb-4">Cryptocurrency prices</h2>
                     <div class="tab-wrapper mb-8 rounded-t-[10px]">
                         <div class="product-table-wrapper no-overlay">

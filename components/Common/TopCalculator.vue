@@ -45,13 +45,7 @@ parent.innerText = item.target.innerText;
 }
 </script>
 <template>
-            <div class="call-to-action relative top-sec mb-10 w-full md:w-4/5 mx-auto">
-            <div class="w-full text-left md:text-center">
-                <h2 class=" text-[32px] text-primary md:text-5xl font-bold leading-9 md:leading-[57px] mb-6 flex items-center justify-start md:justify-center">
-                    Currency Calculator</h2>
-            </div>
-
-        </div>
+          
         <div class="calculator-wrapper flex  justify-center mb-12">
             <div class="inner-ca w-full md:w-auto bg-white border border-[#F3F4F6] rounded-[20px] px-6 py-6  inline-flex mx-auto justify-center">
                 <div class="mb-3 exchange-mb">                                
