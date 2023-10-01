@@ -288,14 +288,36 @@ export default {
         </div>
 
 
-                    <div class="chart-content mb-8">
+        <div class="chart-content mb-5">
                             <div class=" bg-white rounded-2xl p-6">
-                                <div class="mb-6 flex items-end justify-between">
-                                    <div class="">
-                                        <div class="text-black text-2xl font-semibold flex gap-2 items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD <span class="">1.500</span> <span class=" font-normal">0.91 (USD/EUR)</span> <span class=" text-base font-normal">=3.25 %</span>
+                                <div class="mb-6 flex items-start lg:items-end justify-between">
+                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2">
+                                        <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD 
+                                        </div>
+                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2">
+                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal">0.91 (USD/EUR)<span class=" text-base font-normal">=3.25 %</span> </span> 
                                         </div>
                                     </div>
-                                    <div class="text-center hidden md:flex items-center justify-center mt-4"><a
+                                    <div class="no-label w-[78px] block lg:hidden mb-3">
+                                        <div class="select">
+                                            <div class="selectBtn" data-type="firstOption" >Day </div>
+                                            <div class="selectDropdown">
+                                                <div class="option" data-value="all" data-type="firstOption">
+                                                    1D</div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    7D
+                                                </div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    30D
+                                                </div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    YTD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center hidden lg:flex items-start md:items-center justify-center mt-4">
+                                        <a
                                             href=""
                                             class="font-normal font-sm  py-0.5 px-4 bg-[#F3F6FD] border border-[#0051FF] rounded-[5px] ml-3">1d</a><a
                                             href=""
@@ -346,7 +368,11 @@ export default {
                             <h4 class="text-xl font-bold text-black mb-3">Currencies</h4>
                             <p class="text-base font-normal">Currency conversion takes place based on the exchange rates. Valuta.nl has developed a handy Currency Converter Calculator for converting currencies, calculating currencies or converting a currency rate. This makes it easy to convert all currency rates.</p>
                         </div>
-                    
+                        <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[215px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+<div class="text-4xl text-black font-bold">
+    ADS
+</div>
+</div>
                     
                 </div>
                 <div class="w-full lg:w-[298px]">

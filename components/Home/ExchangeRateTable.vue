@@ -153,6 +153,7 @@ export default {
     },
     mounted() {
 
+  
         this.ChartRender();
 
         const tabs = document.querySelectorAll('.tab-link');
@@ -203,17 +204,37 @@ export default {
 .cu-chart canvas {
     max-height: 60px;
     max-width: 170px;
+    width: 100%!important;
 }
+
 </style>
 <template>
     <h2 class="text-black text-2xl md:text-[32px] font-semibold mb-4">Exchange Rate Foreign Currency</h2>
         <div class="detail-content flex flex-col lg:flex-row items-start justify-between gap-6">
             
-                <div class="w-full lg:w-[818px] mb-8">
-                    <div class="tab-wrapper mb-8 rounded-t-[10px]">
-                        <ul class="flex items-center justify-between bg-white">
-        <li class="">
-            <button type="button" class="tab-link  px-4 py-2 group w-[125px] flex flex-col  items-center">
+                <div class="w-full  shrink lg:w-[818px] mb-8">
+                    <div class="tab-wrapper shrink  mb-8 rounded-t-[10px] ">
+                        <div class="no-label w-full block md:hidden mb-3">
+                                <div class="select">
+                                    <div class="selectBtn" data-type="firstOption" >All </div>
+                                    <div class="selectDropdown">
+                                        <div class="option" data-value="all" data-type="firstOption">
+                                            Europe</div>
+                                        <div class="option" data-type="secondOption" data-value="internet-tv">
+                                            America
+                                        </div>
+                                        <div class="option" data-type="secondOption" data-value="internet-tv">
+                                            Africa
+                                        </div>
+                                        <div class="option" data-type="secondOption" data-value="internet-tv">
+                                            Asia
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <ul class="hidden md:flex items-center justify-between bg-white">
+        <li class="shrink ">
+            <button type="button" class="tab-link  px-4 py-2 group md:w-auto lg:w-[125px] flex flex-col  items-center">
                 <div class="tab-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M4.76127 14.3831C4.92342 14.3831 5.05482 14.2517 5.05482 14.0895C5.05482 13.9274 4.92342 13.796 4.76127 13.796C4.09826 13.796 3.62049 13.9239 3.2576 14.1985C2.96842 14.4173 2.76756 14.7262 2.65592 15.1206H2.34775C2.18561 15.1206 2.0542 15.2521 2.0542 15.4142C2.0542 15.5764 2.18561 15.7078 2.34775 15.7078H2.55986C2.55475 15.7872 2.55154 15.8684 2.55154 15.9526C2.55154 16.0367 2.55475 16.118 2.55986 16.1974H2.34775C2.18561 16.1974 2.0542 16.3288 2.0542 16.491C2.0542 16.6531 2.18561 16.7845 2.34775 16.7845H2.65592C2.76756 17.1789 2.96846 17.4878 3.2576 17.7066C3.62049 17.9813 4.09826 18.1092 4.76127 18.1092C4.92342 18.1092 5.05482 17.9778 5.05482 17.8156C5.05482 17.6535 4.92342 17.5221 4.76127 17.5221C3.95537 17.5221 3.4835 17.2994 3.27232 16.7845H4.30885C4.471 16.7845 4.6024 16.6531 4.6024 16.4909C4.6024 16.3288 4.471 16.1974 4.30885 16.1974H3.1474C3.14174 16.1194 3.13861 16.0381 3.13861 15.9525C3.13861 15.8669 3.14174 15.7856 3.1474 15.7077H4.30889C4.47104 15.7077 4.60244 15.5763 4.60244 15.4142C4.60244 15.252 4.47104 15.1206 4.30889 15.1206H3.27236C3.4835 14.6058 3.95541 14.3831 4.76127 14.3831Z" fill="#0051FF"/>
@@ -228,8 +249,8 @@ export default {
                 <div class="tab-text uppercase text-sm font-bold text-[#7A8DB4] transition group-hover:text-cblue">All</div>
             </button>
         </li>
-        <li class="">
-            <button type="button"  class="tab-link  px-4 py-2 group w-[125px] flex flex-col  items-center">
+        <li class="shrink ">
+            <button type="button"  class="tab-link  px-4 py-2 group md:w-auto lg:w-[125px] flex flex-col  items-center">
                 <div class="tab-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 0C4.48625 0 0 4.48625 0 10C0 15.5138 4.48625 20 10 20C15.5138 20 20 15.5138 20 10C20 4.48625 15.5138 0 10 0ZM10 18.75C5.175 18.75 1.25 14.825 1.25 10C1.25 5.175 5.175 1.25 10 1.25C14.825 1.25 18.75 5.175 18.75 10C18.75 14.825 14.825 18.75 10 18.75Z" fill="#7A8DB4"/>
@@ -241,8 +262,8 @@ export default {
                 <div class="tab-text uppercase text-sm font-bold text-[#7A8DB4] transition group-hover:text-cblue">Europe</div>
             </button>
         </li>
-        <li class="">
-            <button type="button"  class="tab-link  px-4 py-2 group w-[125px] flex flex-col  items-center">
+        <li class="shrink ">
+            <button type="button"  class="tab-link  px-4 py-2 group md:w-auto lg:w-[125px] flex flex-col  items-center">
                 <div class="tab-icon">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10.625 0C5.11005 0 0.625 4.48505 0.625 10C0.625 15.515 5.11005 20 10.625 20C16.14 20 20.625 15.515 20.625 10C20.625 4.48505 16.14 0 10.625 0ZM10.625 1.33333C15.4194 1.33333 19.2969 5.20564 19.2969 10C19.2969 14.7944 15.4194 18.6719 10.625 18.6719C5.83064 18.6719 1.95833 14.7944 1.95833 10C1.95833 5.20564 5.83064 1.33333 10.625 1.33333ZM10.6159 4.67057C10.4398 4.67367 10.272 4.74635 10.1493 4.87273C10.0266 4.9991 9.95886 5.16891 9.96094 5.34505V5.90625C8.8845 6.10818 7.96354 6.80134 7.96354 8.0026C7.96354 8.83594 8.33922 9.50993 8.84375 9.90234C9.34828 10.2948 9.91797 10.4687 10.418 10.6354C10.918 10.8021 11.3496 10.9614 11.5951 11.1523C11.8405 11.3433 11.9583 11.5039 11.9583 12.0039C11.9583 13.115 9.29688 13.115 9.29688 12.0039C9.29884 11.9151 9.28306 11.8268 9.25044 11.7442C9.21782 11.6616 9.16903 11.5863 9.10693 11.5229C9.04483 11.4594 8.97067 11.4089 8.88881 11.3745C8.80694 11.34 8.71902 11.3223 8.63021 11.3223C8.54139 11.3223 8.45347 11.34 8.37161 11.3745C8.28975 11.4089 8.21559 11.4594 8.15349 11.5229C8.09139 11.5863 8.0426 11.6616 8.00998 11.7442C7.97736 11.8268 7.96157 11.9151 7.96354 12.0039C7.96354 13.2042 8.88532 13.8987 9.96094 14.1016V14.6602C9.95897 14.7489 9.97476 14.8372 10.0074 14.9198C10.04 15.0025 10.0888 15.0777 10.1509 15.1412C10.213 15.2047 10.2871 15.2551 10.369 15.2896C10.4509 15.324 10.5388 15.3418 10.6276 15.3418C10.7164 15.3418 10.8043 15.324 10.8862 15.2896C10.9681 15.2551 11.0422 15.2047 11.1043 15.1412C11.1664 15.0777 11.2152 15.0025 11.2478 14.9198C11.2805 14.8372 11.2962 14.7489 11.2943 14.6602V14.1016C12.3701 13.8988 13.293 13.2044 13.293 12.0039C13.293 11.1706 12.916 10.4966 12.4115 10.1042C11.9069 9.71175 11.3372 9.53646 10.8372 9.36979C10.3372 9.20312 9.90562 9.04508 9.66016 8.85417C9.41469 8.66325 9.29688 8.5026 9.29688 8.0026C9.29688 6.89149 11.9583 6.89149 11.9583 8.0026C11.9583 8.17959 12.0286 8.34932 12.1538 8.47447C12.2789 8.59962 12.4487 8.66992 12.6257 8.66992C12.8026 8.66992 12.9724 8.59962 13.0975 8.47447C13.2227 8.34932 13.293 8.17959 13.293 8.0026C13.293 6.80315 12.3698 6.11068 11.2943 5.90755V5.34505C11.2953 5.25586 11.2785 5.16736 11.2447 5.08479C11.2109 5.00223 11.1609 4.92729 11.0977 4.86439C11.0344 4.8015 10.9592 4.75194 10.8764 4.71865C10.7937 4.68536 10.7051 4.66901 10.6159 4.67057Z" fill="#7A8DB4"/>
@@ -252,8 +273,8 @@ export default {
                 <div class="tab-text uppercase text-sm font-bold text-[#7A8DB4] transition group-hover:text-cblue">America</div>
             </button>
         </li>
-        <li class="">
-            <button type="button"  class="tab-link  px-4 py-2 group w-[125px] flex flex-col  items-center">
+        <li class="shrink ">
+            <button type="button"  class="tab-link  px-4 py-2 group md:w-auto lg:w-[125px] flex flex-col  items-center">
                 <div class="tab-icon">                
                     <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -272,8 +293,8 @@ export default {
                 <div class="tab-text uppercase text-sm font-bold text-[#7A8DB4] transition group-hover:text-cblue">Africa</div>
             </button>
         </li>
-        <li class="">
-            <button type="button"  class="tab-link  px-4 py-2 group w-[125px] flex flex-col  items-center">
+        <li class="shrink ">
+            <button type="button"  class="tab-link  px-4 py-2 group md:w-auto lg:w-[125px] flex flex-col  items-center">
                 <div class="tab-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M9.61539 1.53846C5.15462 1.53846 1.53846 5.15462 1.53846 9.61539V10.3846C1.53846 14.8454 5.15462 18.4615 9.61539 18.4615H10.3846C14.8454 18.4615 18.4615 14.8454 18.4615 10.3846V9.61539C18.4615 5.15462 14.8454 1.53846 10.3846 1.53846H9.61539ZM9.61539 0H10.3846C15.695 0 20 4.30495 20 9.61539V10.3846C20 15.695 15.695 20 10.3846 20H9.61539C4.30495 20 0 15.695 0 10.3846V9.61539C0 4.30495 4.30495 0 9.61539 0Z" fill="#7A8DB4"/>
@@ -298,8 +319,8 @@ export default {
                                     <tr class="text-sm text-left text-black font-semibold p-4">
                                         <th class="p-4">#</th>
                                         <th>Currency</th>                    
+                                        <th class="">Price Chart</th>
                                         <th class="table-cell md:hidden">Units</th>
-                                        <th class="md:table-cell hidden">Price Chart</th>
                                         <th class="md:table-cell hidden">1 € = UNITS </th>
                                         <th class="md:table-cell hidden">%</th>
                                         <th class="md:table-cell hidden">1 UNIT = €</th>
@@ -319,22 +340,24 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638"></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -354,23 +377,23 @@ export default {
                                             </span>
                                         </td>
                                         
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center gap-2">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#E71212] mr-3" >-2.62 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 5.99988L0 -0.00012207L8 -0.000121205L4 5.99988Z" fill="#E71212" ></path></svg></div></div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.1215</td>
                                     
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#E71212] mr-3" data-v-7fd49c2f="">-2.62 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 5.99988L0 -0.00012207L8 -0.000121205L4 5.99988Z" fill="#E71212" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#E71212] mr-3" >-2.62 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 5.99988L0 -0.00012207L8 -0.000121205L4 5.99988Z" fill="#E71212" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.5560
@@ -389,22 +412,24 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                       
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -423,22 +448,24 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -457,22 +484,23 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -491,22 +519,23 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
+                                        </td> 
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -525,22 +554,23 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -559,22 +589,23 @@ export default {
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -599,12 +630,34 @@ export default {
                     
                     <div class="chart-content mb-5">
                             <div class=" bg-white rounded-2xl p-6">
-                                <div class="mb-6 flex items-end justify-between">
-                                    <div class="">
-                                        <div class="text-black text-2xl font-semibold flex gap-2 items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD <span class="">1.500</span> <span class=" font-normal">0.91 (USD/EUR)</span> <span class=" text-base font-normal">=3.25 %</span>
+                                <div class="mb-6 flex items-start lg:items-end justify-between">
+                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2">
+                                        <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD 
+                                        </div>
+                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2">
+                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal">0.91 (USD/EUR)<span class=" text-base font-normal">=3.25 %</span> </span> 
                                         </div>
                                     </div>
-                                    <div class="text-center hidden md:flex items-center justify-center mt-4"><a
+                                    <div class="no-label w-[78px] block lg:hidden mb-3">
+                                        <div class="select">
+                                            <div class="selectBtn" data-type="firstOption" >Day </div>
+                                            <div class="selectDropdown">
+                                                <div class="option" data-value="all" data-type="firstOption">
+                                                    1D</div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    7D
+                                                </div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    30D
+                                                </div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    YTD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center hidden lg:flex items-start md:items-center justify-center mt-4">
+                                        <a
                                             href=""
                                             class="font-normal font-sm  py-0.5 px-4 bg-[#F3F6FD] border border-[#0051FF] rounded-[5px] ml-3">1d</a><a
                                             href=""
@@ -636,8 +689,8 @@ export default {
                     
  
                 </div>
-                <div class="w-full lg:w-[298px]">
-                    <div class="sidebar-wrapper">
+                <div class="w-full lg:w-[298px] shrink-0">
+                    <div class="sidebar-wrapper w-full">
                         <div class="bg-white rounded-2xl p-5 mb-6">
                         <h3 class=" text-[20px] font-normal text-black mb-3">Popular on Koersen.net</h3>
                         <div class="ex-info-inner w-full flex items-start">
@@ -656,7 +709,21 @@ export default {
                             </div>
                         </div>
                     </div>
-
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

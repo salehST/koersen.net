@@ -1646,6 +1646,23 @@ transition: 300ms;
 .page-calculator .inner-ca, .page-calculator .inner-ca .exchange-mb {
     width: 100%;
 }
+.page-calculator .calculator-wrapper {
+    margin-bottom: 25px;
+}
+canvas#priceChart1{
+    width: 100%!important;
+    height: 251px!important;
+}
+td.product-info-modal.text-center button.bg-cblue {
+    background: white;
+    color: #0059fa;
+    border: 1px solid #0059fa;
+    transition: 250ms;
+}
+td.product-info-modal.text-center button.bg-cblue:hover {
+    background: #0059fa;
+    color: #fff;
+}
 @media only screen and (min-width: 768px) and (max-width: 860px) {
     .service-btn:after {
         right: 5px;
@@ -1678,7 +1695,9 @@ transition: 300ms;
     }
 }
 @media only screen and (max-width: 769px) {
-    
+    .detail-content {
+        padding-top: 60px;
+    }
     .page-heading h2 {
         width: 72%;
     }

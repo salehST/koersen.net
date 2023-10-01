@@ -192,6 +192,7 @@ const date = ref();
 .cu-chart canvas {
     max-height: 60px;
     max-width: 170px;
+    width: 100%!important;
 }
 </style>
 <template>
@@ -202,12 +203,35 @@ const date = ref();
                     
                     <div class="chart-content mb-8">
                             <div class=" bg-white rounded-2xl p-6">
-                                <div class="mb-6 flex items-end justify-between">
-                                    <div class="">
-                                        <div class="text-black text-2xl font-semibold flex gap-2 items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD <span class="">1.500</span> <span class=" font-normal">0.91 (USD/EUR)</span> <span class=" text-base font-normal">=3.25 %</span>
+                                    
+                                <div class="mb-6 flex items-start lg:items-end justify-between">
+                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2">
+                                        <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD 
+                                        </div>
+                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2">
+                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal">0.91 (USD/EUR)<span class=" text-base font-normal">=3.25 %</span> </span> 
                                         </div>
                                     </div>
-                                    <div class="text-center hidden md:flex items-center justify-center mt-4"><a
+                                    <div class="no-label w-[78px] block lg:hidden mb-3">
+                                        <div class="select">
+                                            <div class="selectBtn" data-type="firstOption" >Day </div>
+                                            <div class="selectDropdown">
+                                                <div class="option" data-value="all" data-type="firstOption">
+                                                    1D</div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    7D
+                                                </div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    30D
+                                                </div>
+                                                <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                    YTD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center hidden lg:flex items-start md:items-center justify-center mt-4">
+                                        <a
                                             href=""
                                             class="font-normal font-sm  py-0.5 px-4 bg-[#F3F6FD] border border-[#0051FF] rounded-[5px] ml-3">1d</a><a
                                             href=""
@@ -218,6 +242,72 @@ const date = ref();
                                             class="font-normal font-sm py-0.5 px-4 bg-[#F3F6FD] border border-[#F3F6FD] rounded-[5px] hover:border-[#0051FF] transition">YTD</a>
                                     </div>
                                 </div>
+                                <div class="calculator-wrapper flex  justify-center mb-4">
+                            <div class="inner-ca w-full bg-white block mx-auto justify-center">
+                                <div class="mb-3 exchange-mb">                                
+                                    <div class="flex flex-col  md:flex-row">
+                                        <div class="w-full md:w-1/2">
+                                            <label for="weight"
+                                        class="block mb-1 text-sm font-bold text-black">Euros</label>
+                                            <div class="flex">
+                                                <input type="text" id="weight"
+                                                    class="rounded-none rounded-l-md bg-white border border-r-0 border-[#D5DBE8] text-black font-normal text-xs focus:ring-[#3b82f6] focus:outline-none focus:border-[#3b82f6] block flex-1 min-w-0 w-full p-2.5"
+                                                    placeholder="€ 100">
+                                                <span
+                                                    class="inline-flex items-center bg-white text-black font-normal text-xs focus:ring-[#3b82f6] border-[#D5DBE8] border rounded-r-md"> 
+                                                    <div class="">
+                                                <div class="no-label w-[85px]">
+                                                    <div class="select">
+                                                        <div class="selectBtn" data-type="firstOption" style="background-image: url(/_nuxt/assets/img/logos/eur.png);" >EUR </div>
+                                                        <div class="selectDropdown">
+                                                            <div class="option" data-value="all" data-type="firstOption">
+                                                                EUR</div>
+                                                            <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                                USD
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-center items-end mb-0.5 px-0 py-3.5 md:py-0 md:px-3.5 ex-icon-s">
+                                            <a href=""><img src="@/assets/img/exchange/ex-icon.svg" alt=""></a>
+                                        </div>
+                                        <div class="w-full md:w-1/2">
+                                            <label for="weight"
+                                        class="block mb-1 text-sm font-bold text-black">US Dollar</label>
+                                        
+                                        <div class="flex">
+                                            <input type="text" id="weight"
+                                                class="rounded-none rounded-l-md bg-white border border-r-0 border-[#D5DBE8] text-black font-normal text-xs focus:ring-[#3b82f6] focus:outline-none focus:border-[#3b82f6] block flex-1 min-w-0 w-full p-2.5"
+                                                placeholder="$ 100">
+                                            <span
+                                                class="inline-flex items-center bg-white text-black font-normal text-xs focus:ring-[#3b82f6] border-[#D5DBE8] border rounded-r-md"> 
+                                                <div class="">
+                                            <div class="no-label w-[85px]">
+                                                <div class="select">
+                                                    <div class="selectBtn" data-type="firstOption" style="background-image: url(/_nuxt/assets/img/exchange/usd.svg);" >EUR </div>
+                                                    <div class="selectDropdown">
+                                                        <div class="option" data-value="all" data-type="firstOption">
+                                                            EUR</div>
+                                                        <div class="option" data-type="secondOption" data-value="internet-tv">
+                                                            USD
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            </span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                    </div>
+                    <button type="button" class="bg-cblue lg:hidden text-center items-center justify-center w-full flex text-white text-base font-bold py-2 px-2 rounded-md" >Buy Now</button> 
                                 <div class="chart">
                                     <canvas id="priceChart1" width="400" height="400"></canvas>
                                 </div>
@@ -226,14 +316,14 @@ const date = ref();
                         <h2 class="text-black text-2xl md:text-[32px] font-semibold mb-4">Exchange Rate Foreign Currency</h2>
                     <div class="tab-wrapper mb-8 rounded-t-[10px]">
                         
-                        <div class="product-table-wrapper no-overlay">
+                        <div class="product-table-wrapper">
                             <table class="w-full">
                                 <thead class="table-head">
                                     <tr class="text-sm text-left text-black font-semibold p-4">
                                         <th class="p-4">#</th>
                                         <th>Currency</th>                    
+                                        <th class="">Price Chart</th>
                                         <th class="table-cell md:hidden">Units</th>
-                                        <th class="md:table-cell hidden">Price Chart</th>
                                         <th class="md:table-cell hidden">1 € = UNITS </th>
                                         <th class="md:table-cell hidden">%</th>
                                         <th class="md:table-cell hidden">1 UNIT = €</th>
@@ -253,22 +343,24 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638"></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -288,23 +380,23 @@ const date = ref();
                                             </span>
                                         </td>
                                         
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center gap-2">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#E71212] mr-3" >-2.62 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 5.99988L0 -0.00012207L8 -0.000121205L4 5.99988Z" fill="#E71212" ></path></svg></div></div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.1215</td>
                                     
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#E71212] mr-3" data-v-7fd49c2f="">-2.62 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 5.99988L0 -0.00012207L8 -0.000121205L4 5.99988Z" fill="#E71212" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#E71212] mr-3" >-2.62 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 5.99988L0 -0.00012207L8 -0.000121205L4 5.99988Z" fill="#E71212" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.5560
@@ -323,22 +415,24 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                       
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -357,22 +451,24 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -391,22 +487,23 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -425,22 +522,23 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
+                                        </td> 
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -459,22 +557,23 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -493,22 +592,23 @@ const date = ref();
                                                 </span>
                                             </span>
                                         </td>
-                                        <td class=" table-cell md:hidden">
-                                            <div class="flex flex-col">
-                                                <div class="text-black text-sm font-normal">1.2217</div>
-                                            </div>
-                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
-                                        </td>
-                                        <td class="save-info-tag hidden md:table-cell">
+                                        <td class="save-info-tag  md:table-cell">
                                             <div class="cu-chart">
                                             <div ref="btc" class="">
                                                 <canvas id="stockChart1" width="400" height="400"></canvas>
                                             </div>
                                         </div>
                                         </td>
+                                        <td class=" table-cell md:hidden">
+                                            <div class="flex flex-col">
+                                                <div class="text-black text-sm font-normal flex items-center ga-1">1.2217 <div class="flex items-center text-[10px] font-normal" ><span class="text-[#23A638] mr-3">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[10px] text-[#989CAA]">0.9790 USD/EUR</div>
+                                        </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">1.2217</td>
                                         <td class=" hidden md:table-cell">
-                                            <div class="flex items-center text-sm font-normal" data-v-7fd49c2f=""><span class="text-[#23A638] mr-3" data-v-7fd49c2f="">+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-7fd49c2f=""><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" data-v-7fd49c2f=""></path></svg></div>
+                                            <div class="flex items-center text-sm font-normal" ><span class="text-[#23A638] mr-3" >+3.25 %</span><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 1.27146e-07L8 6L4.76837e-07 6L4 1.27146e-07Z" fill="#23A638" ></path></svg></div>
                                         </td>
                                         <td class="text-black text-sm font-normal hidden md:table-cell">
                                             0.9790
@@ -517,8 +617,118 @@ const date = ref();
                             </tbody>
                         </table>
                                         </div>
+                                    
+                                    <div class="flex items-center justify-center -mt-10 z-20 relative">
+                                        <a href="" class="bg-primary text-white font-bold text-base transition opacity-100 hover:opacity-90 py-2 px-6 rounded-md mb-7">View More</a>
+                                    </div>
                     </div>
                       
+                    <div class="block lg:hidden">
+                        <div class="bg-white rounded-2xl p-5 mb-6">
+                        <h3 class=" text-[20px] font-normal text-black mb-3">Top 5 Savings</h3>
+                        <div class="grid grid-cols-1 gap-3 top-f">
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/BigBank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">BigBank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                2.20%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/Anadolubank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">Anadolubank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                5.52%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/CentraalBeheer.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">Centraal Beheer</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                1.25%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/LloydsBank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">Lloyds Bank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                7.52%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/LeasePlanBank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">LeasePlan Bank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                2.50%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="button-area  text-center mt-6">
+            <a href="" class="text-cblue font-semibold text-base opacity-100 transition hover:opacity-90">All interest rates</a></div>
+
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 mb-6">
+                        <h3 class=" text-[20px] font-normal text-black mb-3">Popular on Koersen.net</h3>
+                        <div class="ex-info-inner w-full flex items-start">
+                            <div class=" flex flex-wrap gap-[10px]">
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Dollar euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Money rates</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Currency conversion</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Danish crown</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">pound euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">exchange rate dollar euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">euro dollar</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">bitcoin rate</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">dollar course</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">eth price</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">currency calculator</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 mb-6">                       
+                        <h3 class=" text-base font-bold text-black mb-1">Tip! Trading in Currency</h3>
+                        <p class=" text-sm font-normal text-dgray mb-1">If you want to trade in currencies, you need background information. Then check:</p>
+                        <ul class=" text-cblue font-normal text-sm list-disc list-inside space-y-1">
+                              
+                            <li class=""> <a href="" class="underline ">IEX.nl</a></li>
+                            <li class=""> <a href="" class="underline ">Beursgorilla.nl</a></li>
+                            <li class=""> <a href="" class="underline ">Beleggen.nl</a></li>
+
+                        </ul>
+                        
+                    </div>
+                    </div>
                     
                     <h3 class="text-black text-2xl md:text-[32px] font-semibold mb-4">Dollar Course</h3>
                     <div class="content-text">
@@ -550,14 +760,24 @@ const date = ref();
                                 </div>
                             </div>
                         </div>
+                        <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex  lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                         <div class=" flex item-center">
                         
-                    <div class="flex items-center">
+                    <div class="flex flex-col md:flex-row gap-3 items-center">
                         <h3 class="text-black text-2xl md:text-[32px] font-semibold mb-4">Exchange Dollar History</h3>
-                        <div class=" font-normal text-sm text-black flex items-center gap-2">
+                        <div class=" font-normal text-sm text-black flex items-center gap-2 mb-4">
                             <span class="">Period</span>  <Datepicker v-model="date" /> <Datepicker v-model="date" /> <button type="button" class="text-sm font-normal text-white py-1.5 px-3 bg-cblue rounded-md opacity-100 transition hover:opacity-90">Update</button>
                         </div>
                     </div>
+                    </div>
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex  lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
                     </div>
                         <div class="bg-white p-6 rounded-[10px] mb-8">
                             <div class="table-area">
@@ -585,12 +805,21 @@ const date = ref();
 </table>
 </div>
                         </div>
-
+                        <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex  lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
 
                         <div class="bg-white p-6 rounded-[10px] mb-8">
                             <h4 class="text-xl font-bold text-black mb-3">Exchange dollar euro</h4>
                             <p class="text-base font-normal">The euro dollar exchange rate is very important in international trade. The dollar exchange rate is of great importance, because all oil prices and gold prices are linked to the US dollar. The euro dollar rate is shown as EUR/USD and the usd euro rate is shown as USD/EUR.As a consumer, you can take advantage of a low dollar exchange rate. Via online auction sites such as eBay, you can then buy expensive products in the US for less than you would normally pay. This is due to the low dollar exchange rate. So make smart use of the low exchange rate dollar euro. When the dollar is high against the euro, it is unfavorable to purchase American products. The products have literally become more expensive in euros. It therefore pays to keep an eye on the dollar and euro exchange rate when making large purchases via the internet from the United States. If the dollar or euro exchange rate is negative, postpone your purchase for a while.</p>
                         </div>
+                        <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                     </div>
                    
 
@@ -598,7 +827,7 @@ const date = ref();
  
                 </div>
                 <div class="w-full lg:w-[298px]">
-                    <div class="sidebar-wrapper w-full">
+                    <div class="sidebar-wrapper hidden md:block w-full">
                          
                         <div class="bg-white rounded-2xl p-5 mb-6">
                         <h3 class=" text-[20px] font-normal text-black mb-3">Top 5 Savings</h3>
@@ -703,6 +932,16 @@ const date = ref();
 
                         </ul>
                         
+                    </div>
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div> 
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
                     </div>
                 </div>
             </div>
