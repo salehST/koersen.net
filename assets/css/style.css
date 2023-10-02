@@ -1679,8 +1679,9 @@ td.product-info-modal.text-center button.bg-cblue:hover {
     }
     
     .page-calculator .inner-ca .exchange-mb .flex-col>div.ex-icon-s {
-        width: 100px;
+        width: 100px;align-items: center;
     }
+  
 }
 @media only screen and (max-width: 990px) {
     .subscription-area .inner-area-subs {
@@ -1695,6 +1696,13 @@ td.product-info-modal.text-center button.bg-cblue:hover {
     }
 }
 @media only screen and (max-width: 769px) {
+    .page-calculator .inner-ca .exchange-mb div>span.inline-flex.items-center {
+        display: none;
+    }
+    
+    .page-calculator .inner-ca .exchange-mb div>input {
+        border-right: 1px solid #f3f4f6;
+    }    
     .detail-content {
         padding-top: 60px;
     }

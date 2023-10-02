@@ -337,7 +337,7 @@ export default {
 
                         
                     <div class="bg-white p-6 rounded-[10px] mb-8">
-                            <div class="grid grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="border-b border-lgray flex items-center justify-between pb-4">
                                         <span class=" text-base font-bold text-black">Last rate</span>
                                     <span class=" text-base font-normal text-black">1.0974</span>
