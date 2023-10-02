@@ -117,7 +117,7 @@ export default {
                     <div class="menu-area py-2 mx-2 text-sm font-semibold text-cblue flex flex-col md:flex-row items-start w-full md:w-auto md:items-center justify-start md:justify-center bg-white hover:text-blue-500 ">
                         
                         <NuxtLink to="/" class="text-base font-semibold md:text-sm md:font-normal py-5 px-5 text-black transition hover:text-cblue w-full md:w-auto">Home</NuxtLink> 
-                        <NuxtLink to="/All rates"
+                        <NuxtLink to="/all-rates-currency"
                             class="text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black w-full md:w-auto transition hover:text-cblue">All rates</NuxtLink>
                         <NuxtLink to="/crypto-rates"
                             class="w-full md:w-auto text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black transition hover:text-cblue">Crypto</NuxtLink>
