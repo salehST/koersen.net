@@ -204,14 +204,14 @@ const date = ref();
                     <div class="chart-content mb-8">
                             <div class=" bg-white rounded-2xl p-6">
                                     
-                                <div class="mb-6 flex items-start lg:items-end justify-between">
-                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2">
-                                        <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD 
-                                        </div>
-                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2">
-                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal">0.91 (USD/EUR)<span class=" text-base font-normal">=3.25 %</span> </span> 
-                                        </div>
-                                    </div>
+                                <div class="mb-6 flex items-start lg:items-end justify-between w-full whitespace-nowrap">
+                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2 whitespace-nowrap w-full lg:w-auto">
+                                        <div class="flex items-center justify-between gap-2 whitespace-nowrap w-full lg:w-auto">
+
+                                            <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD
+
+</div>
+                                            
                                     <div class="no-label w-[78px] block lg:hidden mb-3">
                                         <div class="select">
                                             <div class="selectBtn" data-type="firstOption" >Day </div>
@@ -230,7 +230,13 @@ const date = ref();
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-center hidden lg:flex items-start md:items-center justify-center mt-4">
+                                        </div>
+                                      
+                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2 whitespace-nowrap">
+                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal ">0.91 (USD/EUR)<span class=" text-base font-normal whitespace-nowrap">=3.25 %</span> </span> 
+                                        </div>
+                                    </div>
+                                    <div class="text-center hidden lg:flex items-start md:items-center justify-end mt-4 lg:mt-0 w-full lg:w-auto">
                                         <a
                                             href=""
                                             class="font-normal font-sm  py-0.5 px-4 bg-[#F3F6FD] border border-[#0051FF] rounded-[5px] ml-3">1d</a><a

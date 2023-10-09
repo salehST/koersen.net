@@ -1663,6 +1663,18 @@ td.product-info-modal.text-center button.bg-cblue:hover {
     background: #0059fa;
     color: #fff;
 }
+.close-btn {
+    right: -40px;
+    top: 5px;
+}
+
+button.close-btn-m {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #eff4ff;
+    padding: 8px 5px;
+}
 @media only screen and (min-width: 768px) and (max-width: 860px) {
     .service-btn:after {
         right: 5px;
@@ -1694,12 +1706,60 @@ td.product-info-modal.text-center button.bg-cblue:hover {
         width: 100%;
         justify-content: center;
     }
+    .chart-content.p-cc .selectBtn {
+        padding: 2px 5px;
+    }
 }
 @media only screen and (max-width: 769px) {
     .page-calculator .inner-ca .exchange-mb div>span.inline-flex.items-center {
         display: none;
     }
+    .calculator-wrapper.inline-cal input {
+        border-radius: 0.375rem;
+        border-right: 1px solid #f3f4f6;
+    }
+   
+    .calculator-wrapper.inline-cal  span.inline-flex.items-center.bg-white {
+        display: none;
+    }
+    .inline-cal .ex-icon-s {
+        padding: 0;
+    }
     
+    .inline-cal .ex-icon-s::after, .inline-cal .ex-icon-s:before {
+        display: none;
+    }
+    .inline-cal .inner-ca {
+        padding: 0;
+        border: none;
+    }
+    .inline-cal .select .selectBtn {
+        border: none;
+    }
+    .calculator-wrapper.crypto-cal input {
+        border-radius: 0.375rem;
+        border-right: 1px solid #f3f4f6;
+    }
+   
+    .calculator-wrapper.crypto-cal  span.inline-flex.items-center.bg-white {
+        display: none;
+    }
+    .crypto-cal .ex-icon-s {
+        padding: 0 0px 4px;
+        width: 70px;
+        margin: 0px!important;
+    }
+    
+    .crypto-cal .ex-icon-s::after, .crypto-cal .ex-icon-s:before {
+        display: none;
+    }
+    .crypto-cal .inner-ca {
+        padding: 0;
+        border: none;
+    }
+    .crypto-cal .select .selectBtn {
+        border: none;
+    }
     .page-calculator .inner-ca .exchange-mb div>input {
         border-right: 1px solid #f3f4f6;
     }    

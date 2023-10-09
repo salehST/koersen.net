@@ -210,7 +210,7 @@ export default {
 </style>
 <template>
     <h2 class="text-black text-2xl md:text-[32px] font-semibold mb-4">Exchange Rate Foreign Currency</h2>
-        <div class="detail-content flex flex-col lg:flex-row items-start justify-between gap-6">
+        <div class="flex flex-col lg:flex-row items-start justify-between gap-6">
             
                 <div class="w-full  shrink lg:w-[818px] mb-8">
                     <div class="tab-wrapper shrink  mb-8 rounded-t-[10px] ">
@@ -626,18 +626,43 @@ export default {
                         <div class="tab-pane hidden">Content 5</div>
                         </div>
                     </div>
-                      
+                    <div class="sidebar-wrapper w-full block lg:hidden">
+                        <div class="bg-white rounded-2xl p-5 mb-6">
+                        <h3 class=" text-[20px] font-normal text-black mb-3">Popular on Koersen.net</h3>
+                        <div class="ex-info-inner w-full flex items-start">
+                            <div class=" flex flex-wrap gap-[10px]">
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Dollar euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Money rates</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Currency conversion</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Danish crown</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">pound euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">exchange rate dollar euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">euro dollar</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">bitcoin rate</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">dollar course</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">eth price</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">currency calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                     
-                    <div class="chart-content mb-5">
+                </div>
+                    
+                    <div class="chart-content p-cc mb-5">
                             <div class=" bg-white rounded-2xl p-6">
-                                <div class="mb-6 flex items-start lg:items-end justify-between">
-                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2">
-                                        <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD 
-                                        </div>
-                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2">
-                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal">0.91 (USD/EUR)<span class=" text-base font-normal">=3.25 %</span> </span> 
-                                        </div>
-                                    </div>
+                                <div class="mb-6 flex items-start lg:items-end justify-between w-full whitespace-nowrap">
+                                    <div class="text-black text-2xl font-semibold flex flex-col lg:flex-row gap-2 whitespace-nowrap w-full lg:w-auto">
+                                        <div class="flex items-center justify-between gap-2 whitespace-nowrap w-full lg:w-auto">
+
+                                            <div class=" flex gap-2 items-start lg:items-center"><img src="@/assets/img/flag/usa.png" alt="" class="h-8 w-8"> EUR/USD
+
+</div>
+                                            
                                     <div class="no-label w-[78px] block lg:hidden mb-3">
                                         <div class="select">
                                             <div class="selectBtn" data-type="firstOption" >Day </div>
@@ -656,7 +681,13 @@ export default {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-center hidden lg:flex items-start md:items-center justify-center mt-4">
+                                        </div>
+                                      
+                                        <div class="flex flex-col items-start lg:flex-row lg:items-center gap-2 whitespace-nowrap">
+                                            <span class="">1.500</span> <span class="flex gap-2 items-center font-normal ">0.91 (USD/EUR)<span class=" text-base font-normal whitespace-nowrap">=3.25 %</span> </span> 
+                                        </div>
+                                    </div>
+                                    <div class="text-center hidden lg:flex items-start md:items-center justify-end mt-4 lg:mt-0 w-full lg:w-auto">
                                         <a
                                             href=""
                                             class="font-normal font-sm  py-0.5 px-4 bg-[#F3F6FD] border border-[#0051FF] rounded-[5px] ml-3">1d</a><a
@@ -674,6 +705,11 @@ export default {
                             </div>
                         </div>
 
+                        <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                     <div class="content-text">
                         <div class="bg-white p-6 rounded-[10px] mb-8">
                             <h2 class="text-xl font-bold text-black mb-3">Foreign currency rates</h2>
@@ -685,12 +721,16 @@ export default {
                         </div>
                     </div>
                    
-
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                     
  
                 </div>
                 <div class="w-full lg:w-[298px] shrink-0">
-                    <div class="sidebar-wrapper w-full">
+                    <div class="sidebar-wrapper w-full hidden lg:block">
                         <div class="bg-white rounded-2xl p-5 mb-6">
                         <h3 class=" text-[20px] font-normal text-black mb-3">Popular on Koersen.net</h3>
                         <div class="ex-info-inner w-full flex items-start">

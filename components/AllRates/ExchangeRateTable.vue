@@ -210,7 +210,7 @@ export default {
         <div class="detail-content flex flex-col lg:flex-row items-start justify-between gap-6">
             
                 <div class="w-full page-calculator lg:w-[818px] mb-8">
-                    <div class="box-wrapper  bg-white border border-[#F3F4F6] rounded-[20px] px-6 pt-6 mb-8">
+                    <div class="box-wrapper hidden lg:block bg-white border border-[#F3F4F6] rounded-[20px] px-6 pt-6 mb-8">
                     <h2 class=" text-xl text-primary md:text-4xl font-bold leading-9 md:leading-[57px] mb-6 flex items-center justify-start md:justify-center">
                     Currency Calculator</h2>
                     <CommonTopCalculator />
@@ -628,7 +628,127 @@ export default {
                         <div class="tab-pane hidden">Content 5</div>
                         </div>
                     </div>
-                       
+                    <div class="sidebar-wrapper block lg:hidden">
+                        
+                        <div class="bg-white rounded-2xl p-5 mb-6">
+                        <h3 class=" text-[20px] font-normal text-black mb-3">Top 5 Savings</h3>
+                        <div class="grid grid-cols-1 gap-3 top-f">
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/BigBank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">BigBank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                2.20%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/Anadolubank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">Anadolubank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                5.52%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/CentraalBeheer.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">Centraal Beheer</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                1.25%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/LloydsBank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">Lloyds Bank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                7.52%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="border border-[#CBD7F1] rounded-[10px] overflow-hidden t-item">
+                    <div class="inline-flex items-center px-5 py-3">
+                        <div class="text-center mx-auto h-8 w-8 rounded-full overflow-hidden mr-3">
+                            <img src="@/assets/img/exchange/LeasePlanBank.jpg" class="w-full h-auto  " alt="">
+                        </div>
+                        <ul>
+                            <li class="text-black text-base font-normal">LeasePlan Bank</li>
+                            <li class="flex items-center text-[#15952A] text-sm">
+                                2.50%
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="button-area  text-center mt-6">
+            <a href="" class="text-cblue font-semibold text-base opacity-100 transition hover:opacity-90">All interest rates</a></div>
+
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 mb-6">
+                        <h3 class=" text-[20px] font-normal text-black mb-3">Popular on Koersen.net</h3>
+                        <div class="ex-info-inner w-full flex items-start">
+                            <div class=" flex flex-wrap gap-[10px]">
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Dollar euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Money rates</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Currency conversion</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">Danish crown</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">pound euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">exchange rate dollar euro</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">euro dollar</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">bitcoin rate</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">dollar course</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">eth price</a>
+                                <a href="" class="bg-white rounded-md text-sm font-normal text-cblue border border-cblue transition hover:bg-cblue hover:text-white px-3 py-2 uppercase">currency calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
+                        <div class="bg-white rounded-2xl p-5 mb-6">
+                        
+                        
+                            <img src="@/assets/img/fi-side-img.svg" alt="image" class="max-h-[60px] w-fit mb-1">
+                            <h3 class=" text-base font-bold text-black mb-1">Save up to €1,000 on your fixed costs</h3>
+                            <p class=" text-sm font-normal text-dgray mb-1">Many Dutch people take out a financial product and then don't look back at it for years. However, you can easily save on your fixed financial costs with the following Finance Network comparisons:</p>
+                            <ul class=" text-cblue font-normal text-sm list-disc list-inside space-y-1">
+                                <li class=""> <a href="" class="underline ">Car insurance</a></li>
+                                <li class=""> <a href="" class="underline ">Borrow money</a></li>
+                                <li class=""> <a href="" class="underline ">Contents insurance</a></li>
+                                <li class=""> <a href="" class="underline ">Building insurance</a></li>
+                                <li class=""> <a href="" class="underline ">Cheap travel insurance</a></li>
+                                <li class=""> <a href="" class="underline ">Health insurance</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
+                  
+                </div>
 
 
                     <div class="content-text">
@@ -643,10 +763,15 @@ export default {
                     </div>
                    
 
+                    <div class="bg-[#FFF8EA] w-full h-[180px] lg:h-[596px] p-5 mb-6 rounded-2xl flex lg:hidden justify-center items-center">
+                        <div class="text-4xl text-black font-bold">
+                            ADS
+                        </div>
+                    </div>
                     
  
                 </div>
-                <div class="w-full lg:w-[298px]">
+                <div class="w-full lg:w-[298px] hidden lg:block">
                     <div class="sidebar-wrapper">
                         
                         <div class="bg-white rounded-2xl p-5 mb-6">

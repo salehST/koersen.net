@@ -242,10 +242,10 @@ export default {
                                     <button type="button" class="bg-cblue hidden lg:flex text-white text-base font-bold py-2 px-2 rounded-md" >Buy Now</button>  
                                 </div>
                                 </div>
-                                <div class="calculator-wrapper flex  justify-center mb-4">
+                                <div class="calculator-wrapper crypto-cal flex  justify-center mb-4">
                             <div class="inner-ca w-full bg-white block mx-auto justify-center">
                                 <div class="mb-3 exchange-mb">                                
-                                    <div class="flex flex-col  md:flex-row">
+                                    <div class="flex flex-row">
                                         <div class="w-full md:w-1/2">
                                             <label for="weight"
                                         class="block mb-1 text-sm font-bold text-black">Bitcoin</label>

@@ -103,13 +103,21 @@ export default {
                     <NuxtLink to="/" class="flex md:hidden items-center w-40">
                         <img src="@/assets/img/logo.svg"
                             class="mr-3 h-[40px] sm:h-[50px]" alt="Logo" /></NuxtLink>
-                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline">
-                        <div id="nav-icon" @click="toggleClass">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </button>
+                        <div class="flex items-center gap-4">
+                            <div class="search-icon flex md:hidden">
+                            <button @click="openModal" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.60116 2.20039C4.17068 2.20039 2.20039 4.17068 2.20039 6.60116C2.20039 9.03164 4.17068 11.0019 6.60116 11.0019C9.03164 11.0019 11.0019 9.03164 11.0019 6.60116C11.0019 4.17068 9.03164 2.20039 6.60116 2.20039ZM0 6.60116C0 2.95544 2.95544 0 6.60116 0C10.2469 0 13.2023 2.95544 13.2023 6.60116C13.2023 8.02683 12.7504 9.34693 11.9819 10.426L15.6779 14.1219C16.1075 14.5515 16.1075 15.2481 15.6779 15.6778C15.2482 16.1074 14.5516 16.1074 14.1219 15.6778L10.426 11.9819C9.34693 12.7504 8.02683 13.2023 6.60116 13.2023C2.95544 13.2023 0 10.2469 0 6.60116Z" fill="black"/>
+</svg>
+</button>
+                            </div>
+                        <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline">
+                            <div id="nav-icon" @click="toggleClass">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                    </div>
                 </div>
                 <nav class="flex-col flex-grow items-center pb-4 md:pb-0 hidden md:flex md:justify-between md:flex-row">
                     <NuxtLink to="/" class="hidden md:flex items-center w-40"><img src="@/assets/img/logo.svg"
@@ -123,11 +131,12 @@ export default {
                             class="w-full md:w-auto text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black transition hover:text-cblue">Crypto</NuxtLink>
                         <NuxtLink to="/currency-details"
                             class="w-full md:w-auto text-base font-semibold md:text-sm md:font-normal border-t border-dblue md:border-none py-5 px-5 text-black transition hover:text-cblue">Converter</NuxtLink>
-                        <div class="search-icon">
-                            <button @click="openModal" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.60116 2.20039C4.17068 2.20039 2.20039 4.17068 2.20039 6.60116C2.20039 9.03164 4.17068 11.0019 6.60116 11.0019C9.03164 11.0019 11.0019 9.03164 11.0019 6.60116C11.0019 4.17068 9.03164 2.20039 6.60116 2.20039ZM0 6.60116C0 2.95544 2.95544 0 6.60116 0C10.2469 0 13.2023 2.95544 13.2023 6.60116C13.2023 8.02683 12.7504 9.34693 11.9819 10.426L15.6779 14.1219C16.1075 14.5515 16.1075 15.2481 15.6779 15.6778C15.2482 16.1074 14.5516 16.1074 14.1219 15.6778L10.426 11.9819C9.34693 12.7504 8.02683 13.2023 6.60116 13.2023C2.95544 13.2023 0 10.2469 0 6.60116Z" fill="black"/>
-</svg>
-</button>
+                        <div class="search-icon hidden md:flex">
+                            <button @click="openModal" type="button">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.60116 2.20039C4.17068 2.20039 2.20039 4.17068 2.20039 6.60116C2.20039 9.03164 4.17068 11.0019 6.60116 11.0019C9.03164 11.0019 11.0019 9.03164 11.0019 6.60116C11.0019 4.17068 9.03164 2.20039 6.60116 2.20039ZM0 6.60116C0 2.95544 2.95544 0 6.60116 0C10.2469 0 13.2023 2.95544 13.2023 6.60116C13.2023 8.02683 12.7504 9.34693 11.9819 10.426L15.6779 14.1219C16.1075 14.5515 16.1075 15.2481 15.6779 15.6778C15.2482 16.1074 14.5516 16.1074 14.1219 15.6778L10.426 11.9819C9.34693 12.7504 8.02683 13.2023 6.60116 13.2023C2.95544 13.2023 0 10.2469 0 6.60116Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                 </div>
                 <div class="w-full lg:w-auto flex md:hidden mt-14">
